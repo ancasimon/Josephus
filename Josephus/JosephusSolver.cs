@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
 namespace Josephus
 {
     public class JosephusSolver
     {
-        public int Solve(int numberOfPeople, int killingInterval)
+        public int Solve(int numberOfPeople, int killingInterval) 
         {
             //throw new NotImplementedException();
             //return 1; ---this was the correct answer for the first test case 
@@ -22,6 +19,7 @@ namespace Josephus
                 return Enumerable.Range(1, numberOfPeople).Where(number => number % 2 > 0).Max(); //Give me a list of all the numbers in that range - then take away all the even ones (because we know they will die right away) - and then give me the biggest number (the person left standing)
             }
 
+            //HINT: Loop through the numberOfPeople - to get to the right solution!
 
             return numberOfPeople;
         }
